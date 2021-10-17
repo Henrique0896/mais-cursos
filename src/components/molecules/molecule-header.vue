@@ -1,7 +1,7 @@
 <template>
-  <v-app-bar app flat color="#FFFFFF">
+  <v-app-bar app flat color="#E4D9FF">
     <v-container>
-      <v-toolbar flat>
+      <v-toolbar flat color="#E4D9FF">
         <v-toolbar-title>Mais cursos</v-toolbar-title>
 
         <v-spacer></v-spacer>
