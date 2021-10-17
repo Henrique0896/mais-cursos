@@ -7,11 +7,11 @@
         <v-spacer></v-spacer>
 
         <v-toolbar-items>
-          <v-btn text> Home </v-btn>
+          <v-btn text :href="'/#/'"> Home </v-btn>
 
-          <v-btn text> Sobre </v-btn>
+          <v-btn text :href="'/#/sobre'"> Sobre </v-btn>
 
-          <v-btn text> Contato </v-btn>
+          <v-btn text :href="'/#/contato'"> Contato </v-btn>
         </v-toolbar-items>
       </v-toolbar>
     </v-container>

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <molecule-header></molecule-header>
-    <v-main> </v-main>
+    <v-main> <h1>Esta é a Sobre</h1> </v-main>
   </v-app>
 </template>
 
@@ -15,7 +15,7 @@ import { MoleculeHeader } from "@/components/molecules";
     MoleculeHeader,
   },
 })
-export default class TemplateDefault extends Vue {}
+export default class TemplateSobre extends Vue {}
 </script>
 
 <style scoped>

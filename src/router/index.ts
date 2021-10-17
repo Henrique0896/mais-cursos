@@ -1,7 +1,11 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Maintenance from "../views/Maintenance.vue";
-import { TemplateDefault } from "../components/templates";
+import {
+  TemplateHome,
+  TemplateSobre,
+  TemplateContato,
+} from "../components/templates";
 
 Vue.use(VueRouter);
 
@@ -9,7 +13,17 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Home",
-    component: TemplateDefault,
+    component: TemplateHome,
+  },
+  {
+    path: "/sobre",
+    name: "Sobre",
+    component: TemplateSobre,
+  },
+  {
+    path: "/contato",
+    name: "Contato",
+    component: TemplateContato,
   },
   {
     path: "/manutencao",

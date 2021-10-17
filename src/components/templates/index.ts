@@ -1,3 +1,5 @@
-import TemplateDefault from "./template-default.vue";
+import TemplateHome from "./template-home.vue";
+import TemplateSobre from "./template-sobre.vue";
+import TemplateContato from "./template-contato.vue";
 
-export { TemplateDefault };
+export { TemplateHome, TemplateSobre, TemplateContato };
