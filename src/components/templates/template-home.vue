@@ -1,18 +1,21 @@
 <template>
   <v-app>
     <molecule-header></molecule-header>
-    <v-main> <h1>Esta é a Home</h1> </v-main>
+    <v-main>
+      <molecule-carousel></molecule-carousel>
+    </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import { MoleculeHeader } from "@/components/molecules";
+import { MoleculeHeader, MoleculeCarousel } from "@/components/molecules";
 
 @Component({
   components: {
     MoleculeHeader,
+    MoleculeCarousel,
   },
 })
 export default class TemplateHome extends Vue {}
