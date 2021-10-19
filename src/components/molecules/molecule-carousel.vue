@@ -15,7 +15,7 @@ import Vue from "vue";
 import { ISlide } from "../../models/interfaces";
 import { slides } from "../../helpers";
 
-@Component({})
+@Component
 export default class MoleculeCarousel extends Vue {
   slides: ISlide[] = slides;
 }
