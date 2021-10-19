@@ -2,7 +2,9 @@
   <v-app-bar app flat color="#E4D9FF">
     <v-container>
       <v-toolbar flat color="#E4D9FF">
-        <v-toolbar-title>Mais cursos</v-toolbar-title>
+        <v-toolbar-title
+          ><v-btn text :href="'/#/'"> <h1>+cursos</h1> </v-btn></v-toolbar-title
+        >
 
         <v-spacer></v-spacer>
 
@@ -28,4 +30,10 @@ export default class MoleculeHeader extends Vue {}
 </script>
 
 <style scoped>
+h1 {
+  font-family: roboto;
+  color: #273469;
+  text-transform: none;
+  font-style: oblique;
+}
 </style>
