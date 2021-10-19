@@ -3,8 +3,9 @@
     <molecule-header></molecule-header>
     <v-main>
       <molecule-carousel></molecule-carousel>
-      <molecule-footer></molecule-footer>
+      <organism-main-page></organism-main-page>
     </v-main>
+    <molecule-footer></molecule-footer>
   </v-app>
 </template>
 
@@ -16,12 +17,14 @@ import {
   MoleculeCarousel,
   MoleculeFooter,
 } from "@/components/molecules";
+import { OrganismMainPage } from "@/components/organisms";
 
 @Component({
   components: {
     MoleculeHeader,
     MoleculeCarousel,
     MoleculeFooter,
+    OrganismMainPage,
   },
 })
 export default class TemplateHome extends Vue {}
