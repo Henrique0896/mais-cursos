@@ -1,3 +1,3 @@
-import slides from "@/helpers/slides";
+import products from "@/helpers/products";
 
-export { slides };
+export { products };

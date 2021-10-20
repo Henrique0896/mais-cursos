@@ -1,4 +1,4 @@
-export default interface ISlide {
+export default interface IProduct {
   id: number;
   text: string;
   image: string;

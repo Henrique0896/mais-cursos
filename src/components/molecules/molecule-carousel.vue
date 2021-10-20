@@ -1,8 +1,12 @@
 <template>
   <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
-    <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="slide.image">
+    <v-carousel-item
+      v-for="(product, i) in products"
+      :key="i"
+      :src="product.image"
+    >
       <v-row class="fill-height" align="center" justify="center">
-        <div class="carousel-title">{{ slide.text }}</div>
+        <div class="carousel-title">{{ product.text }}</div>
       </v-row>
     </v-carousel-item>
   </v-carousel>
@@ -12,12 +16,12 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { ISlide } from "../../models/interfaces";
-import { slides } from "../../helpers";
+import { IProduct } from "../../models/interfaces";
+import { products } from "../../helpers";
 
 @Component
 export default class MoleculeCarousel extends Vue {
-  slides: ISlide[] = slides;
+  products: IProduct[] = products;
 }
 </script>
 

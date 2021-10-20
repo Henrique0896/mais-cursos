@@ -1,3 +1,3 @@
-import ISlide from "./ISlide";
+import IProduct from "./IProduct";
 
-export { ISlide };
+export { IProduct };
