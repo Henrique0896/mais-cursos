@@ -9,16 +9,17 @@
           <v-col v-for="n in 3" :key="n" cols="12" md="4">
             <v-item v-slot="{ active, toggle }">
               <v-card
-                :color="active ? 'primary' : ''"
+                :color="active ? 'primary' : '#30343F'"
                 class="d-flex align-center"
                 dark
                 height="200"
                 @click="toggle"
               >
                 <v-scroll-y-transition>
-                  <div v-if="active" class="text-h2 flex-grow-1 text-center">
-                    Active
-                  </div>
+                  <div
+                    v-if="active"
+                    class="d-flex align-center justify-center"
+                  ></div>
                 </v-scroll-y-transition>
               </v-card>
             </v-item>
@@ -33,9 +34,13 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
+import { ICourse } from "../../models/interfaces";
+import { courses } from "../../helpers";
 
 @Component
-export default class MoleculeCarees extends Vue {}
+export default class MoleculeCarees extends Vue {
+  courses: ICourse[] = courses;
+}
 </script>
 
 <style scoped>

@@ -1,3 +1,3 @@
-import products from "@/helpers/products";
+import courses from "@/helpers/courses";
 
-export { products };
+export { courses };

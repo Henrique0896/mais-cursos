@@ -1,3 +1,3 @@
-import IProduct from "./IProduct";
+import ICourse from "./ICourse";
 
-export { IProduct };
+export { ICourse };
