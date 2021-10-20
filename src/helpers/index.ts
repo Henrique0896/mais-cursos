@@ -1,3 +1,4 @@
 import courses from "@/helpers/courses";
+import careers from "@/helpers/careers";
 
-export { courses };
+export { courses, careers };

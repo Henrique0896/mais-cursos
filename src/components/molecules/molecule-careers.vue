@@ -6,15 +6,24 @@
     <v-item-group>
       <v-container>
         <v-row>
-          <v-col v-for="n in 3" :key="n" cols="12" md="4">
+          <v-col v-for="career in careers" :key="career.id" cols="12" md="4">
             <v-item v-slot="{ active, toggle }">
               <v-card
                 :color="active ? 'primary' : '#30343F'"
-                class="d-flex align-center"
+                class="d-flex align-center justify-center pa-10"
                 dark
                 height="200"
                 @click="toggle"
               >
+                <div class="d-flex align-center flex-column">
+                  <h4 class="mb-5">{{ career.name }}</h4>
+                  <p class="caption d-flex align-self-start">
+                    {{ career.description }}
+                  </p>
+                  <p class="caption d-flex align-self-start">
+                    Por apenas: {{ career.price }} reais
+                  </p>
+                </div>
                 <v-scroll-y-transition>
                   <div
                     v-if="active"
@@ -34,12 +43,12 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { ICourse } from "../../models/interfaces";
-import { courses } from "../../helpers";
+import { ICareer } from "../../models/interfaces";
+import { careers } from "../../helpers";
 
 @Component
 export default class MoleculeCarees extends Vue {
-  courses: ICourse[] = courses;
+  careers: ICareer[] = careers;
 }
 </script>
 
