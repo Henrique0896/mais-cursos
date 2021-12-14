@@ -1,6 +1,6 @@
-import { ICareer } from "../models/interfaces";
+import { IProduct } from "../models/interfaces";
 
-const items: ICareer[] = [
+const items: IProduct[] = [
   {
     id: 0,
     name: "Desenvolvedor Frontend",

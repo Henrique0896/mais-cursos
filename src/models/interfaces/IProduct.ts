@@ -1,4 +1,4 @@
-export default interface ICourse {
+export default interface IProduct {
   id: number;
   name: string;
   image: string;

@@ -16,12 +16,12 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { ICourse } from "../../models/interfaces";
+import { IProduct } from "../../models/interfaces";
 import { courses } from "../../helpers";
 
 @Component
 export default class MoleculeCarousel extends Vue {
-  courses: ICourse[] = courses;
+  courses: IProduct[] = courses;
 }
 </script>
 

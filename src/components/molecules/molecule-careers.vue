@@ -7,31 +7,56 @@
       <v-container>
         <v-row>
           <v-col v-for="career in careers" :key="career.id" cols="12" md="4">
-            <v-item v-slot="{ active, toggle }">
-              <v-card
-                :color="active ? 'primary' : '#30343F'"
-                class="d-flex align-center justify-center pa-10"
-                dark
-                height="200"
-                @click="toggle"
-              >
-                <div class="d-flex align-center flex-column">
-                  <h4 class="mb-5">{{ career.name }}</h4>
-                  <p class="caption d-flex align-self-start">
+            <div class="text-center">
+              <v-dialog v-model="dialog" width="500">
+                <template v-slot:activator="{ on, attrs }">
+                  <v-item v-slot="{ active, toggle }">
+                    <v-card
+                      :color="active ? 'primary' : '#30343F'"
+                      class="d-flex align-center justify-center pa-10"
+                      dark
+                      height="200"
+                      @click="toggle"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      <div class="d-flex align-center flex-column">
+                        <h4 class="mb-5">{{ career.name }}</h4>
+
+                        <p class="caption d-flex align-self-start"></p>
+                      </div>
+                      <v-scroll-y-transition>
+                        <div
+                          v-if="active"
+                          class="d-flex align-center justify-center"
+                        ></div>
+                      </v-scroll-y-transition>
+                    </v-card>
+                  </v-item>
+                </template>
+
+                <v-card>
+                  <v-card-title class="text-h5 grey lighten-2">
+                    {{ career.name }}
+                  </v-card-title>
+
+                  <v-card-text>
                     {{ career.description }}
-                  </p>
-                  <p class="caption d-flex align-self-start">
+                    <br />
                     Por apenas: {{ career.price }} reais
-                  </p>
-                </div>
-                <v-scroll-y-transition>
-                  <div
-                    v-if="active"
-                    class="d-flex align-center justify-center"
-                  ></div>
-                </v-scroll-y-transition>
-              </v-card>
-            </v-item>
+                  </v-card-text>
+
+                  <v-divider></v-divider>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="primary" text @click="dialog = false">
+                      Eu quero!
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -43,12 +68,13 @@
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-import { ICareer } from "../../models/interfaces";
+import { IProduct } from "../../models/interfaces";
 import { careers } from "../../helpers";
 
 @Component
 export default class MoleculeCarees extends Vue {
-  careers: ICareer[] = careers;
+  careers: IProduct[] = careers;
+  dialog: any = false;
 }
 </script>
 

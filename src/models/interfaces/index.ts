@@ -1,4 +1,3 @@
-import ICourse from "./ICourse";
-import ICareer from "./ICareer";
+import IProduct from "./IProduct";
 
-export { ICourse, ICareer };
+export { IProduct };

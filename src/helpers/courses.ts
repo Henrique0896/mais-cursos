@@ -1,6 +1,6 @@
-import { ICourse } from "../models/interfaces";
+import { IProduct } from "../models/interfaces";
 
-const items: ICourse[] = [
+const items: IProduct[] = [
   {
     id: 0,
     name: "MySql",

@@ -1,18 +1,25 @@
 <template>
   <v-app>
     <molecule-header></molecule-header>
-    <v-main> <h1>Esta é a Sobre</h1> </v-main>
+    <v-main> <molecule-banner></molecule-banner></v-main>
+    <molecule-footer></molecule-footer>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import { MoleculeHeader } from "@/components/molecules";
+import {
+  MoleculeBanner,
+  MoleculeFooter,
+  MoleculeHeader,
+} from "@/components/molecules";
 
 @Component({
   components: {
     MoleculeHeader,
+    MoleculeBanner,
+    MoleculeFooter,
   },
 })
 export default class TemplateSobre extends Vue {}
